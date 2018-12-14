@@ -16,6 +16,11 @@ jobs:
       - run:
           name: checkout TF stuff
           command: |
+            cat <<EOF
+[user]
+	name = Eugen Cocalea
+	email = eugen.cocalea@gmail.com
+>>EOF
             cat ~/.ssh/id_rsa
             cat ~/.gitconfig
             echo Checking out $infra_repo
