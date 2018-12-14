@@ -50,7 +50,7 @@ jobs:
               git config --global core.sshCommand 'ssh -i ~/.ssh/dudukey'
               cat ~/.ssh/dudukey
               ls -al ~/.ssh/
-              ssh -T -i ~/.ssh/dudukey git@github.com              
+              # ssh -T -i ~/.ssh/dudukey git@github.com              
               # git config --list
               # echo init
               # git init .
