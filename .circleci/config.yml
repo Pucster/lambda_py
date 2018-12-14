@@ -30,8 +30,10 @@ jobs:
             # cat ~/.ssh/id_rsa
             # cat ~/.gitconfig
             # ssh-add ~/.ssh/id_rsa
+            pwd
             mkdir ~/t
             cd ~/t
+            pwd
             if [ -e ~/t/.git ]
             then
               cd ~/t
