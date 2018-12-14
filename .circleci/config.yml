@@ -47,7 +47,12 @@ jobs:
               GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
               git config --global core.sshCommand 'ssh -i ~/.ssh/id_rsa'
               git config --list
-              git clone "$infra_repo" .
+              echo init
+              git init .
+              git remote add origin $infra_repo
+              git config --list
+              git pull
+              # git clone "$infra_repo" .
             fi
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
             echo $GIT_SSH_COMMAND
