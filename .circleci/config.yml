@@ -60,6 +60,8 @@ jobs:
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
             echo $GIT_SSH_COMMAND
             git config --list
+            cat ~/.ssh/dudukey
+            ls -al ~/.ssh/
             echo Checking out $infra_repo
             git clone "$infra_repo"
       - run:
