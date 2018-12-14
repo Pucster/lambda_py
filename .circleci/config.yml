@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/lambda_py
+    docker:
+      - image: circleci/node:8.10
+    steps:
+      - checkout
+      - run:
+          name: test
+          command: echo "that's it"
+
+      - deploy:
+          name: 'Deploy code'
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo "Will deploy to aws"
+            fi
