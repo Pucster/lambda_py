@@ -16,7 +16,7 @@ jobs:
       - run:
           name: checkout TF stuff
           command: |
-            cat << EOF > ~/.gitconfig
+            cat << EOF >> ~/.gitconfig
             [user]
             name = Eugen Cocalea
             email = eugen.cocalea@gmail.com
