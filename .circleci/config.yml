@@ -30,6 +30,8 @@ jobs:
             # cat ~/.ssh/id_rsa
             # cat ~/.gitconfig
             # ssh-add ~/.ssh/id_rsa
+            mkdir t
+            cd t
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
             echo $GIT_SSH_COMMAND
             git config --list
