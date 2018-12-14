@@ -30,6 +30,8 @@ jobs:
             # cat ~/.ssh/id_rsa
             # cat ~/.gitconfig
             # ssh-add ~/.ssh/id_rsa
+            git config --list
+            set -e
             pwd
             mkdir ~/t
             cd ~/t
@@ -41,6 +43,7 @@ jobs:
             else
               mkdir -p ~/t
               cd ~/t
+              git config --list
               git clone "$infra_repo" .
             fi
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
