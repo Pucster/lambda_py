@@ -29,8 +29,6 @@ jobs:
             EOF
             cat ~/.ssh/id_rsa
             cat ~/.gitconfig
-            echo Testing 123
-            ssh -T git@github.com
             echo Checking out $infra_repo
             git clone "$infra_repo" --verbose
       - run:
