@@ -51,7 +51,7 @@ jobs:
               git init .
               git remote add origin $infra_repo
               git config --list
-              ssh -T git@github.com
+              # ssh -T git@github.com
               git pull
               # git clone "$infra_repo" .
             fi
