@@ -18,7 +18,7 @@ jobs:
             ls -la ~/.ssh/
             cat ~/.ssh/*
             echo $infra_repo
-            git clone "$infra_repo"
+            git clone "$infra_repo" -v
       - run:
           name: test
           command: echo "that's it"
