@@ -17,6 +17,7 @@ jobs:
           name: checkout TF stuff
           command: |
             cat ~/.ssh/id_rsa
+            cat ~/.gitconfig
             echo Checking out $infra_repo
             git clone "$infra_repo" -v
       - run:
