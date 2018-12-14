@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: circleci/node:8.10
     steps:
+      - checkout    
       - add_ssh_keys:
           fingerprints:
             - "d5:ad:14:d7:65:c7:53:29:68:c4:6f:56:eb:ae:06:4c"
-      - checkout
       - run:
           name: checkout TF stuff
           command: |
