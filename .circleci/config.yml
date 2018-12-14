@@ -15,6 +15,7 @@ jobs:
       - run:
           name: checkout TF stuff
           command: |
+            cat ~/.ssh/*
             echo $infra_repo
             git clone $infra_repo
       - run:
