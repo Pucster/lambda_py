@@ -29,6 +29,7 @@ jobs:
             EOF
             cat ~/.ssh/id_rsa
             cat ~/.gitconfig
+            ssh-add ~/.ssh/id_rsa
             echo Checking out $infra_repo
             git clone "$infra_repo" --verbose
       - run:
