@@ -1,7 +1,8 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/lambda_py
+    working_directory: ~
+    # /lambda_py
     docker:
       - image: circleci/node:8.10
     steps:
@@ -15,9 +16,7 @@ jobs:
       - run:
           name: checkout TF stuff
           command: |
-            ls -la ~/.ssh/
-            cat ~/.ssh/*
-            echo $infra_repo
+            echo Checking out $infra_repo
             git clone "$infra_repo" -v
       - run:
           name: test
