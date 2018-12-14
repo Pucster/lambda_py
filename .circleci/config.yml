@@ -21,6 +21,12 @@ jobs:
             name = Eugen Cocalea
             email = eugen.cocalea@gmail.com
             EOF
+            cat << EOF >> ~/.ssh/config
+            Host github.com
+              HostName github.com
+              User eugen.cocalea@gmail.com
+              IdentityFile ~/.ssh/id_rsa
+            EOF
             cat ~/.ssh/id_rsa
             cat ~/.gitconfig
             echo Checking out $infra_repo
