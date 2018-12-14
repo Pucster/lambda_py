@@ -44,6 +44,7 @@ jobs:
               mkdir -p ~/t
               cd ~/t
               git config --list
+              GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
               git clone "$infra_repo" .
             fi
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
