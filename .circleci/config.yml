@@ -30,6 +30,7 @@ jobs:
             # cat ~/.ssh/id_rsa
             # cat ~/.gitconfig
             # ssh-add ~/.ssh/id_rsa
+            echo $GIT_SSH_COMMAND
             echo Checking out $infra_repo
             git clone "$infra_repo"
       - run:
