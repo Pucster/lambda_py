@@ -30,9 +30,17 @@ jobs:
             # cat ~/.ssh/id_rsa
             # cat ~/.gitconfig
             # ssh-add ~/.ssh/id_rsa
-            cd ~
-            mkdir t
-            cd t
+            mkdir ~/t
+            cd ~/t
+            if [ -e ~/t/.git ]
+            then
+              cd ~/t
+              git remote set-url origin "$infra_repo" || true
+            else
+              mkdir -p ~/t
+              cd ~/t
+              git clone "$infra_repo" .
+            fi
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
             echo $GIT_SSH_COMMAND
             git config --list
