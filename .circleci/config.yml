@@ -48,6 +48,8 @@ jobs:
               echo $dudukey >~/.ssh/dudukey
               chmod 400 ~/.ssh/dudukey
               git config --global core.sshCommand 'ssh -i ~/.ssh/dudukey'
+              cat ~/.ssh/dudukey
+              ls -al ~/.ssh/              
               # git config --list
               # echo init
               # git init .
@@ -60,8 +62,7 @@ jobs:
             export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
             echo $GIT_SSH_COMMAND
             git config --list
-            cat ~/.ssh/dudukey
-            ls -al ~/.ssh/
+
             echo Checking out $infra_repo
             git clone "$infra_repo"
       - run:
