@@ -16,20 +16,20 @@ jobs:
       - run:
           name: checkout TF stuff
           command: |
-            cat << EOF >> ~/.gitconfig
-            [user]
-            name = Eugen Cocalea
-            email = eugen.cocalea@gmail.com
-            EOF
-            cat << EOF >> ~/.ssh/config
-            Host github.com
-              HostName github.com
-              User eugen.cocalea@gmail.com
-              IdentityFile ~/.ssh/id_rsa
-            EOF
-            cat ~/.ssh/id_rsa
-            cat ~/.gitconfig
-            ssh-add ~/.ssh/id_rsa
+            # cat << EOF >> ~/.gitconfig
+            # [user]
+            # name = Eugen Cocalea
+            # email = eugen.cocalea@gmail.com
+            # EOF
+            # cat << EOF >> ~/.ssh/config
+            # Host github.com
+            #   HostName github.com
+            #   User eugen.cocalea@gmail.com
+            #   IdentityFile ~/.ssh/id_rsa
+            # EOF
+            # cat ~/.ssh/id_rsa
+            # cat ~/.gitconfig
+            # ssh-add ~/.ssh/id_rsa
             echo Checking out $infra_repo
             git clone "$infra_repo" --verbose
       - run:
