@@ -32,7 +32,7 @@ jobs:
             echo Testing 123
             ssh -T git@github.com
             echo Checking out $infra_repo
-            git clone "$infra_repo" -v
+            git clone "$infra_repo" --verbose
       - run:
           name: test
           command: echo "that's it"
